@@ -39,7 +39,7 @@ jobs:
       - name: Fetch data from Conseil Constitutionnel website
         run: |
           pip3 install -r requirements.txt
-          python run.py
+          python prepare_data.py
 
       - name: Install dependancies
         env:
