@@ -48,7 +48,7 @@ export default function Stats() {
 
     return (
         <div>
-            {nbVotes > 0 && <p className="text-xl"><span className="text-semibold underline underline-offset-1">Nombre de signatures :</span><br className="block sm:hidden"/>{nbVotes} /{votants} ({((100*nbVotes)/votants).toFixed(2)}%)</p>}
+            {nbVotes > 0 && <p className="text-xl"><span className="text-semibold underline underline-offset-1">Nombre de signatures :</span> <br className="block sm:hidden"/>{nbVotes} /{votants} ({((100*nbVotes)/votants).toFixed(2)}%)</p>}
             {nbJours > 0 && <p className="text-xl pt-3">{nbJours} jours restants avant le 10 avril 2022 <br className="block sm:hidden"/>(fin des recueils de signatures)</p>}
         <div className="space-y-5 mt-10">
             {(stats && stats.length > 0) ? stats.map((candidat) => (
