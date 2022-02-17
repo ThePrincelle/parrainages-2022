@@ -18,10 +18,10 @@ export default function Stats() {
     const votants: number = 42000;
 
     // Calculer le nombre de jours restants avant le 10/04/2022
-    const date = new Date();
-    const dateFin = new Date(2022, 4, 10);
-    const diff = dateFin.getTime() - date.getTime();
-    const nbJours = Math.ceil(diff / (1000 * 3600 * 24));
+    const fromDate: Date = new Date();
+    const toDate: Date = new Date('2022-04-10 00:00:00');  
+    const diff: number = toDate.getTime() - fromDate.getTime();
+    const nbJours: number = Math.floor(diff / (1000 * 60 * 60 * 24));
 
     useEffect(() => {
         // Load JSON data from local file
