@@ -62,16 +62,14 @@ export default function Stats() {
                             <BanIcon className="text-red-600 w-12" />
                         }
                     </div>
-                    <div className="pl-4 w-full my-auto">
+                    <div className="pl-3 w-full my-auto">
                         <div className="text-left">
                         <p key={candidat.id} className="text-lg">
                             <span className="font-normal">{candidat.name}</span> :<br className="block sm:hidden"/> <span className="font-semibold">{candidat.votes}/{step} ({((100 * candidat.votes) / nbVotes).toFixed(2)}%)</span>
                         </p>
                         </div>
-
-
-                        {candidat.votesRatioProgress !== 100 && <div className="w-full bg-gray-300 rounded-full h-3.5">
-                        <div className="bg-blue-600 h-3.5 rounded-full" style={{width: candidat.votesRatioProgress + "%"}}></div>
+                        {candidat.votesRatioProgress !== 100 && <div className="w-full mb-1 bg-gray-300 rounded-full h-3.5">
+                        <div className="bg-cyan-600 h-3.5 rounded-full mb-1" style={{width: candidat.votesRatioProgress + "%"}}></div>
                         </div>}
                     </div>
                 </div>
