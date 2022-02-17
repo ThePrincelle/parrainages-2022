@@ -9,7 +9,7 @@ function App() {
         <h1 className="text-4xl font-semibold">Parrainages</h1>
         <h2 className="text-2xl text-cyan-700 pt-2">Présidentielles 2022</h2>
         <div className="mt-12">
-          <p>Site mis à jour tous les jours à 13h.</p>
+          <p>Site mis à jour tous les jours à 19h.</p>
           <p>Ce service n'est associé à aucun parti politique.</p>
           <p className="mb-4">Données obtenues du <a href="https://presidentielle2022.conseil-constitutionnel.fr/" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-800 hover:underline">site du Conseil Constitutionnel</a>.</p>
           <div className="relative mb-12">

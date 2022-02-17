@@ -17,9 +17,9 @@ export default function Stats() {
     const step: number = 500;
     const votants: number = 42000;
 
-    // Calculer le nombre de jours restants avant le 10/04/2022
+    // Calculer le nombre de jours restants avant le 04/03/2022
     const fromDate: Date = new Date();
-    const toDate: Date = new Date('2022-04-10');  
+    const toDate: Date = new Date('2022-03-04');  
     let diff: number = toDate.getTime() - fromDate.getTime();
     let nbJours: number = Math.floor(diff / (1000 * 60 * 60 * 24));
 
@@ -49,7 +49,7 @@ export default function Stats() {
     return (
         <div>
             {nbVotes > 0 && <p className="text-xl"><span className="text-semibold underline underline-offset-1">Nombre de signatures :</span> <br className="block sm:hidden"/>{nbVotes} /{votants} ({((100*nbVotes)/votants).toFixed(2)}%)</p>}
-            {nbJours > 0 && <p className="text-xl pt-3">{nbJours} jours restants avant le 10 avril 2022 <br className="block sm:hidden"/>(fin des recueils de signatures)</p>}
+            {nbJours > 0 && <p className="text-xl pt-3">{nbJours} jours restants avant le 4 mars 2022 <br className="block sm:hidden"/>(fin des recueils de signatures)</p>}
         <div className="space-y-5 mt-10">
             {(stats && stats.length > 0) ? stats.map((candidat) => (
                 <div className="flex align-center w-full" key={candidat.id}>

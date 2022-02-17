@@ -8,7 +8,7 @@ Petit service pour afficher la progression des parrainages pour l'élection pré
 
 Conçu avec React/TypeScript et TailwindCSS.
 
-Site mis à jour tous les jours à 12h UTC.
+Site mis à jour tous les jours à 18h UTC.
 
 Ce service n'est associé à aucun parti politique.
 
