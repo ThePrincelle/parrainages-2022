@@ -19,14 +19,14 @@ export default function Stats() {
 
     // Calculer le nombre de jours restants avant le 10/04/2022
     const fromDate: Date = new Date();
-    const toDate: Date = new Date('2022-04-10 00:00:00');  
-    const diff: number = toDate.getTime() - fromDate.getTime();
-    const nbJours: number = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const toDate: Date = new Date('2022-04-10');  
+    let diff: number = toDate.getTime() - fromDate.getTime();
+    let nbJours: number = Math.floor(diff / (1000 * 60 * 60 * 24));
 
     useEffect(() => {
         // Load JSON data from local file
         fetch('/stats.json').then(response => response.json()).then(data => {
-            console.log(data);
+            // console.log(data);
             let formattedData: Candidat[] = [];
             let id = 0;
             let votesTotal = 0;
@@ -52,11 +52,11 @@ export default function Stats() {
             {nbJours > 0 && <p className="text-xl pt-3">{nbJours} jours restants avant le 10 avril 2022 <br className="block sm:hidden"/>(fin des recueils de signatures)</p>}
         <div className="space-y-5 mt-10">
             {(stats && stats.length > 0) ? stats.map((candidat) => (
-                <div className="flex align-center w-full">
+                <div className="flex align-center w-full" key={candidat.id}>
                     <div className="text-sm flex align-center text-right">
-                        {candidat.id === 0 && <span className="text-green-800 pr-3 font-bold text-xl my-auto w-12">1st</span>}
-                        {candidat.id === 1 && <span className="text-green-700 pr-3 font-bold text-xl my-auto w-12">2nd</span>}
-                        {candidat.id === 2 && <span className="text-green-600 pr-3 font-bold text-xl my-auto w-12">3rd</span>}
+                        {candidat.id === 0 && <span className="text-green-700 pr-3 font-bold text-xl my-auto w-12">1st</span>}
+                        {candidat.id === 1 && <span className="text-green-600 pr-3 font-bold text-xl my-auto w-12">2nd</span>}
+                        {candidat.id === 2 && <span className="text-green-500 pr-3 font-bold text-xl my-auto w-12">3rd</span>}
                         {candidat.votes >= 500 ? 
                             <BadgeCheckIcon className="text-green-600 w-12" /> : 
                             <BanIcon className="text-red-600 w-12" />
@@ -64,7 +64,7 @@ export default function Stats() {
                     </div>
                     <div className="pl-3 w-full my-auto">
                         <div className="text-left">
-                        <p key={candidat.id} className="text-lg">
+                        <p className="text-lg">
                             <span className="font-normal">{candidat.name}</span> :<br className="block sm:hidden"/> <span className="font-semibold">{candidat.votes}/{step} ({((100 * candidat.votes) / nbVotes).toFixed(2)}%)</span>
                         </p>
                         </div>
