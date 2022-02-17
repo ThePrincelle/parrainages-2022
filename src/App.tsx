@@ -11,7 +11,7 @@ function App() {
         <div className="mt-12">
           <p>Site mis à jour tous les jours à 13h.</p>
           <p>Ce service n'est associé à aucun parti politique.</p>
-          <p className="mb-4">Données obtenues du <a href="https://presidentielle2022.conseil-constitutionnel.fr/" target="_blank" className="text-cyan-700 hover:text-cyan-800 hover:underline">site du Conseil Constitutionnel</a>.</p>
+          <p className="mb-4">Données obtenues du <a href="https://presidentielle2022.conseil-constitutionnel.fr/" target="_blank" rel="noreferrer" className="text-cyan-700 hover:text-cyan-800 hover:underline">site du Conseil Constitutionnel</a>.</p>
           <div className="relative mb-12">
 				<div
 					className="absolute inset-0 flex items-center"

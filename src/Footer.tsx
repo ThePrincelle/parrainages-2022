@@ -24,6 +24,7 @@ export default function Footer() {
 							<a
 								className="text-gray-400 hover:text-gray-500 transition-colors"
 								href="https://princelle.org"
+								rel="noreferrer"
 								target="_blank"
 							>
 								Maxime Princelle

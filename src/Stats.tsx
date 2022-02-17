@@ -54,9 +54,9 @@ export default function Stats() {
             {(stats && stats.length > 0) ? stats.map((candidat) => (
                 <div className="flex align-center w-full">
                     <div className="text-sm flex align-center text-right">
-                        {candidat.id == 0 && <span className="text-green-800 pr-3 font-bold text-xl my-auto w-12">1st</span>}
-                        {candidat.id == 1 && <span className="text-green-700 pr-3 font-bold text-xl my-auto w-12">2nd</span>}
-                        {candidat.id == 2 && <span className="text-green-600 pr-3 font-bold text-xl my-auto w-12">3rd</span>}
+                        {candidat.id === 0 && <span className="text-green-800 pr-3 font-bold text-xl my-auto w-12">1st</span>}
+                        {candidat.id === 1 && <span className="text-green-700 pr-3 font-bold text-xl my-auto w-12">2nd</span>}
+                        {candidat.id === 2 && <span className="text-green-600 pr-3 font-bold text-xl my-auto w-12">3rd</span>}
                         {candidat.votes >= 500 ? 
                             <BadgeCheckIcon className="text-green-600 w-12" /> : 
                             <BanIcon className="text-red-600 w-12" />
@@ -70,7 +70,7 @@ export default function Stats() {
                         </div>
 
 
-                        {candidat.votesRatioProgress != 100 && <div className="w-full bg-gray-300 rounded-full h-3.5">
+                        {candidat.votesRatioProgress !== 100 && <div className="w-full bg-gray-300 rounded-full h-3.5">
                         <div className="bg-blue-600 h-3.5 rounded-full" style={{width: candidat.votesRatioProgress + "%"}}></div>
                         </div>}
                     </div>
