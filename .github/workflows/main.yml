@@ -20,17 +20,6 @@ jobs:
         with:
           node-version: '17.x'
       
-      - name: Notify
-        uses: jasongitmail/fast-webhook@v1.1.4
-        with:
-          url: https://api.pushover.net/1/messages.json
-          json: |
-            {
-              "token": "${{ secrets.PUSHOVER_TOKEN }}",
-              "user": "${{ secrets.PUSHOVER_USER }}",
-              "message": "Démarrage du build pour 'parrainages2022.princelle.org'."
-            }
-      
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -51,17 +40,6 @@ jobs:
           NODE_OPTIONS: --openssl-legacy-provider
         run: yarn build
           
-      - name: Notify
-        uses: jasongitmail/fast-webhook@v1.1.4
-        with:
-          url: https://api.pushover.net/1/messages.json
-          json: |
-            {
-              "token": "${{ secrets.PUSHOVER_TOKEN }}",
-              "user": "${{ secrets.PUSHOVER_USER }}",
-              "message": "Mise en production de 'parrainages2022.princelle.org'."
-            }
-          
       - name: Deploy to Infomaniak
         uses: easingthemes/ssh-deploy@main
         env:
@@ -80,7 +58,7 @@ jobs:
             {
               "token": "${{ secrets.PUSHOVER_TOKEN }}",
               "user": "${{ secrets.PUSHOVER_USER }}",
-              "message": "L'application 'parrainages2022.princelle.org' a bien été déployée sur l'infrastructure Infomaniak."
+              "message": "L'application 'parrainages2022.princelle.org' a bien été mise à jour."
             }
       - name: Notify on failure
         if: ${{ failure() }}
@@ -91,5 +69,5 @@ jobs:
             {
               "token": "${{ secrets.PUSHOVER_TOKEN }}",
               "user": "${{ secrets.PUSHOVER_USER }}",
-              "message": "Erreur lors du déploiement de 'parrainages2022.princelle.org' sur l'infrastructure Infomaniak."
+              "message": "Erreur lors de la mise à jour de 'parrainages2022.princelle.org'."
             }
