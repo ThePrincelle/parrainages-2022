@@ -1,6 +1,6 @@
 # parrainages-2022
 
-[![Production deployment](https://github.com/ThePrincelle/parrainages-2022/actions/workflows/main.yml/badge.svg)](https://github.com/ThePrincelle/parrainages-2022/actions/workflows/main.yml)
+[![Deployment/Update](https://github.com/ThePrincelle/parrainages-2022/actions/workflows/main.yml/badge.svg)](https://github.com/ThePrincelle/parrainages-2022/actions/workflows/main.yml)
 
 https://parrainages2022.princelle.org/
 
