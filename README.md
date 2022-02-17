@@ -4,6 +4,8 @@
 
 https://parrainages2022.princelle.org/
 
+Petit service pour afficher la progression des parrainages pour l'élection présidentielle de la France de 2022.
+
 Conçu avec React/TypeScript et TailwindCSS.
 
 Site mis à jour tous les jours à 12h UTC.
