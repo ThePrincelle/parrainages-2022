@@ -8,11 +8,11 @@ export default function Footer() {
 					className="absolute inset-0 flex items-center"
 					aria-hidden="true"
 				>
-					<div className="w-full border-t border-gray-300" />
+					<div className="w-full border-t border-gray-300 dark:border-gray-400" />
 				</div>
 			</div>
 
-			<footer className="bg-white">
+			<footer className="bg-white dark:bg-slate-900 dark:text-white">
 				<div className="max-w-7xl mx-auto pt-10 px-4 overflow-hidden sm:px-6 lg:px-8">
 					<p className="text-center text-base text-gray-400">
 						<span className="block">

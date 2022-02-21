@@ -47,12 +47,12 @@ export default function Stats() {
     }, []);
 
     return (
-        <div>
+        <div className="dark:text-slate-300">
             {nbVotes > 0 && <p className="text-xl"><span className="text-semibold underline underline-offset-1">Nombre de signatures :</span> <br className="block sm:hidden"/>{nbVotes} /{votants} ({((100*nbVotes)/votants).toFixed(2)}%)</p>}
             {nbJours > 0 && <p className="text-xl pt-3">{nbJours} jours restants avant le 4 mars 2022 <br className="block sm:hidden"/>(fin des recueils de signatures)</p>}
         <div className="space-y-5 mt-10">
             {(stats && stats.length > 0) ? stats.map((candidat) => (
-                <div className="flex align-center w-full" key={candidat.id}>
+                <div className="flex align-center w-full dark:text-slate-300" key={candidat.id}>
                     <div className="text-sm flex align-center text-right">
                         {candidat.id === 0 && <span className="text-green-700 pr-3 font-bold text-xl my-auto w-12">1st</span>}
                         {candidat.id === 1 && <span className="text-green-600 pr-3 font-bold text-xl my-auto w-12">2nd</span>}
@@ -68,7 +68,7 @@ export default function Stats() {
                             <span className="font-normal">{candidat.name}</span> :<br className="block sm:hidden"/> <span className="font-semibold">{candidat.votes}/{step} ({((100 * candidat.votes) / nbVotes).toFixed(2)}%)</span>
                         </p>
                         </div>
-                        {candidat.votesRatioProgress !== 100 && <div className="w-full mb-1 bg-gray-300 rounded-full h-3.5">
+                        {candidat.votesRatioProgress !== 100 && <div className="w-full mb-1 bg-gray-300 dark:bg-gray-500 rounded-full h-3.5">
                         <div className="bg-cyan-600 h-3.5 rounded-full mb-1" style={{width: candidat.votesRatioProgress + "%"}}></div>
                         </div>}
                     </div>
