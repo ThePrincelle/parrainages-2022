@@ -1,8 +1,8 @@
 # parrainages-2022
 
-[![Deployment/Update](https://github.com/ThePrincelle/parrainages-2022/actions/workflows/main.yml/badge.svg)](https://github.com/ThePrincelle/parrainages-2022/actions/workflows/main.yml)
-
-https://parrainages2022.princelle.org/
+> **Warning**
+> 
+> Ce projet n'est plus maintenu, ceci est principalement dû au fait que l'évènement en question est passé. 
 
 Petit service pour afficher la progression des parrainages pour l'élection présidentielle de la France de 2022.
 
